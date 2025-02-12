@@ -5,9 +5,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
-const api = axios.create({
-  baseURL: 'http://localhost:8080', // Replace with your actual server URL
-});
 
 
 function Appointment() {
@@ -35,7 +32,6 @@ function Appointment() {
         },
         body: JSON.stringify(data),
       });
-      setIsSubmitted(true);
   
       if (!response.ok) {
         throw new Error('Failed to submit service request');
@@ -43,7 +39,17 @@ function Appointment() {
   
       const result = await response.json();
       console.log('Service request submitted successfully:', result);
-      // alert('Your service request has been submitted successfully!');
+  
+      // Show thank-you message
+      setIsSubmitted(true);
+  
+      // Open WhatsApp with the booking details if the link is provided
+      if (result.whatsappLink) {
+        window.open(result.whatsappLink, '_blank'); // Open WhatsApp in a new tab
+      } else {
+        console.warn('No WhatsApp link provided in the response.');
+      }
+  
     } catch (error) {
       console.error('Error submitting service request:', error);
       alert('An error occurred while submitting your request. Please try again.');

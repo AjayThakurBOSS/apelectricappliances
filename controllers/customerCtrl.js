@@ -80,9 +80,31 @@ const postAppointmentRequestCtrl = async (req, res) => {
       }
     });
 
+    // Generate WhatsApp message
+    const whatsappMessage = `New Appointment Request:\n\n
+      Name: ${name}\n
+      Email: ${email}\n
+      Phone: ${phone}\n
+      Appliance Type: ${applianceType}\n
+      Sub Selection: ${subSelection}\n
+      Dependent Selection: ${dependentSelection}\n
+      Flat/House Number: ${flatHouseNumber}\n
+      Landmark: ${landmark}\n
+      Preferred Date and Time: ${dateTime}\n
+      Address: ${address}\n
+      Issue Description: ${description}\n`;
+
+    // Encode the message for WhatsApp URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    console.log(encodedMessage)
+    // Generate WhatsApp Click to Chat link
+    const whatsappLink = `https://wa.me/918310885838?text=${encodedMessage}`; // Replace with admin's phone number
+    console.log(encodedMessage)
+    console.log(whatsappLink)
     res.status(201).send({
       message: "Appointment request sent successfully.",
       success: true,
+      whatsappLink, // Send the WhatsApp link to the frontend
     });
 
   } catch (error) {

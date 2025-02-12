@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 const colors = require('colors');
-// require('dotenv').config(); // Ensure .env is loaded
-
+require('dotenv').config(); // Ensure .env is loaded
+const MONGODB_URI = process.env.MONGODB_URI
 const uri = "mongodb+srv://ajaykrthakur02:0XpuNXMbLR3xkego@cluster0.hxen6zc.mongodb.net/apelectric"
 
 const connectDB = async () => {
     try {
-        if (!uri) {
+        if (!MONGODB_URI) {
             throw new Error('MONGO_URL is not defined in environment variables');
         }
-        await mongoose.connect(uri, { 
+        await mongoose.connect(MONGODB_URI, { 
             useNewUrlParser: true, 
             useUnifiedTopology: true 
         });
