@@ -21,6 +21,7 @@ import Cooler from '../images/cooler.webp';
 import Speaker from '../images/speaker.jpg';
 import HomeTheater from '../images/mometheater.jpg';
 import Cleaner from '../images/vaccome.jpg';
+import Stablizer from '../images/stablizer.webp'
 
 // Styled Components (same as before)
 const Container = styled.div`
@@ -163,8 +164,9 @@ const AllIconCard = () => {
     { name: 'Kitchen Chimney', image: Kitchenhimney },
     { name: 'Water Purifier', image: RO },
     { name: 'Dishwasher', image: Dishwasher },
-    { name: 'Water Heater', image: Gidger },
+    { name: 'Gidger', image: Gidger },
     { name: 'TV', image: TV },
+    {name:'stabilizer', image: Stablizer}
   ];
 
   const miniAppliances = [
@@ -224,7 +226,7 @@ const AllIconCard = () => {
             <ModalImage src={selectedItem.image} alt={selectedItem.name} />
             <h2>{selectedItem.name}</h2>
             <div>
-            <ModalButton onClick={() => alert(`Calling ${selectedItem.name}`)}>Call Now</ModalButton>
+            <ModalButton > <a href="tel:94721 67198">Call Now</a> </ModalButton>
             <ModalButton onClick={() => handleBookNow(selectedItem.name)}>Book Now</ModalButton>
             </div>
           </ModalContent>

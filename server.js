@@ -3,11 +3,11 @@ const colors = require('colors');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const cors = require('cors')
-// const connectDB = require("./config/db")
+const connectDB = require("./config/db")
 
 
 // mongodb configuration
-// connectDB(); 
+connectDB(); 
 
 
 const app = express()         
@@ -23,12 +23,12 @@ app.use(morgan('dev'));
 // app.use("/api/v1/uploads", require("./route/fileUploadRoutes"));
 // app.use("/api/v1/offlineappointments", require("./route/OfflineAppointmentRoutes"));
 // app.use("/api/v1/doctor", require("./route/doctorRoute"));
-// app.use("/api/v1/customer", require("./route/customerRoute"));
-// app.use("/api/v1/feedback", require("./route/feedbackRoutes"));
+app.use("/api/v1/customer", require("./route/customerRoute"));
+app.use("/api/v1/feedback", require("./route/feedbackRoutes"));
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-  })
+// app.get('/', (req, res) => {
+//     res.send('Hello World!')
+//   })
 
 // Error Handling Middleware
 // Enable CORS for all origins or specify your frontend's origin
@@ -60,7 +60,7 @@ app.use((err, req, res, next) => {
 
 
 // Port configuration
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
 
 // Start server
 app.listen(port, () => {

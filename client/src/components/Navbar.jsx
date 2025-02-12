@@ -58,7 +58,7 @@ function Navbar() {
       {/* Mobile Call Now Button (Centered) */}
       <div className="md:hidden flex justify-center items-center py-2 absolute  top-0 absolute left-1/2 transform -translate-x-1/2">
         <a
-          href="tel:+1234567890" // Replace with your mobile number
+          href="tel:94721 67198" // Replace with your mobile number
           className="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600"
         >
           Call Now

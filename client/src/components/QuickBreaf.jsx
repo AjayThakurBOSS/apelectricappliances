@@ -124,9 +124,9 @@ const QuickBreaf = () => {
         'We provide comprehensive repair and maintenance services for all your home appliances. Ensure your appliances are running smoothly with our expert technicians.',
     },
     {
-      title: 'Quick AC Repair',
+      title: 'Installation & Un-installation',
       description:
-        'Fast and reliable air conditioning repair services. Our team is available 24/7 to ensure your comfort is restored as quickly as possible.',
+        'Fast and reliable Installation & Un-installation  services for all the home appliances. Our team is available 24/7 to ensure your comfort is restored as quickly as possible.',
     },
   ];
 
@@ -156,8 +156,8 @@ const QuickBreaf = () => {
           <ModalContent onClick={(e) => e.stopPropagation()}>
             <ModalHeading>{selectedCard.title}</ModalHeading>
             <ModalDescription>{selectedCard.description}</ModalDescription>
-            <ModalButton onClick={() => alert(`Calling for ${selectedCard.title}`)}>
-              Call Now
+            <ModalButton >
+            <a href="tel:94721 67198">Call Now</a>
             </ModalButton>
             <ModalButton onClick={() => handleBookNow(selectedCard.title)}>
               Book Now

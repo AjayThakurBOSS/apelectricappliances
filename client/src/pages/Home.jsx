@@ -7,6 +7,8 @@ import Services from '../components/Services'
 import TestService from '../components/TestService'
 import QuickBreaf from '../components/QuickBreaf'
 import AllIconCard from '../components/AllIconnCard'
+import TestDropdown from '../components/TestDropdown'
+import IconButton from '../components/IconButton'
 
 function Home() {
   return (
@@ -14,13 +16,13 @@ function Home() {
 
       <HeroCarousel />
       <QuickBreaf/>
+      <IconButton/>
       <AllIconCard/>
       <BeforeAfter />
       <Services />
-
-     
-
       <TestService/>
+     {/*  <TestDropdown/> */}
+
 
       {/* Services Section */}
       <section className="py-6 bg-gray-50">
@@ -79,7 +81,7 @@ function Home() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <motion.a
-                href="tel:+1234567890"
+                href="tel:9472167198"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-primary font-bold py-4 px-8 rounded-lg text-lg inline-flex items-center justify-center gap-2"

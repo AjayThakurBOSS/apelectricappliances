@@ -89,7 +89,7 @@ function HeroCarousel() {
                   <span className="text-lg md:text-2xl">🔧</span> Book Now
                 </motion.a>
                 <motion.a
-                  href="tel:+1234567890"
+                  href="tel:94721 67198"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-white hover:bg-white/90 text-primary font-bold py-2 px-2 md:py-4 md:px-8 rounded-lg text-sm md:text-lg inline-flex items-center justify-center gap-2"

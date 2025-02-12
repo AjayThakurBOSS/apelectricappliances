@@ -256,9 +256,9 @@ function Services() {
               </button>
               <button
                 className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600"
-                onClick={() => alert(`Calling for ${selectedItem.name}`)} // Placeholder for Call Now
+               
               >
-                Call Now
+               <a href="tel:94721 67198">Call Now</a>
               </button>
             </div>
           </div>
