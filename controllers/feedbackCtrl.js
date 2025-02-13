@@ -55,7 +55,6 @@ const getfeedbacksCtrl = async (req, res) => {
       data: feedbacks,
     });
   } catch (error) {
-    console.log("Error in fetching Feedbacks", error);
     res.status(500).send({
       success: false,
       error,
