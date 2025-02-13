@@ -99,8 +99,7 @@ const postAppointmentRequestCtrl = async (req, res) => {
     console.log(encodedMessage)
     // Generate WhatsApp Click to Chat link
     const whatsappLink = `https://wa.me/918310885838?text=${encodedMessage}`; // Replace with admin's phone number
-    console.log(encodedMessage)
-    console.log(whatsappLink)
+    
     res.status(201).send({
       message: "Appointment request sent successfully.",
       success: true,
@@ -108,7 +107,6 @@ const postAppointmentRequestCtrl = async (req, res) => {
     });
 
   } catch (error) {
-    console.log(error);
     res.status(500).send({
       success: false,
       error,
@@ -127,8 +125,7 @@ const getAppointmentRequestCtrl = async (req, res) => {
     });
 
   } catch (error) {
-    console.log("Error in fetching Appointment Requests", error);
-    res.status(500).send({
+  res.status(500).send({
       success: false,
       error,
       message: "Error in fetching Appointment Requests from DB",

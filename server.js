@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 const cors = require('cors')
 const connectDB = require("./config/db")
-
+const path = require('path')
 
 // mongodb configuration
 connectDB(); 
@@ -29,6 +29,14 @@ app.use("/api/v1/feedback", require("./route/feedbackRoutes"));
 // app.get('/', (req, res) => {
 //     res.send('Hello World!')
 //   })
+
+// static file access
+app.use(express.static(path.join(__dirname, './client/build')))
+
+app.get('*', function(req, res){
+    res.sendFile(path.join(__dirname, './client/build/index.html'))
+} )
+
 
 // Error Handling Middleware
 // Enable CORS for all origins or specify your frontend's origin

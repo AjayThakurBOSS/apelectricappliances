@@ -5,8 +5,7 @@ module.exports = async (req, res, next) => {
     try{
         const token = req.headers['authorization']?.split(" ")[1];
     JWT.verify(token, "XYZGHSJ123", (err, decode) => {
-        console.log(err)
-        console.log(decode)
+       
         if(err){    
             
             return res.status(200).send({
@@ -19,7 +18,6 @@ module.exports = async (req, res, next) => {
         }
     })
     } catch (error) {
-        console.log(error)
         res.status(401).send({
             message: "Auth Failed catch",
             success: false
