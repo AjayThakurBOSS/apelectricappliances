@@ -13,9 +13,9 @@ const connectDB = async () => {
             useNewUrlParser: true, 
             useUnifiedTopology: true 
         });
-        console.log(`MongoDB connected: ${mongoose.connection.host}`.bgGreen.white);
+        // console.log(`MongoDB connected: ${mongoose.connection.host}`.bgGreen.white);
     } catch (error) {
-        console.log(`MongoDB connection issue: ${error.message}`.bgRed.white);
+        // console.log(`MongoDB connection issue: ${error.message}`.bgRed.white);
         process.exit(1); // Exit process with failure
     }
 };
