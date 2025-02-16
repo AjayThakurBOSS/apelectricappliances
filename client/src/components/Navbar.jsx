@@ -9,6 +9,8 @@ function Navbar() {
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-10">
+      <marquee style={{color: 'green', fontWeight:'600'}}>A P Electric & Home Appliances, Best and Fast  Repair  Shop </marquee>
+      <hr />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-22">
           <div className="flex items-center">
@@ -56,7 +58,7 @@ function Navbar() {
       </div>
 
       {/* Mobile Call Now Button (Centered) */}
-      <div className="md:hidden flex justify-center items-center py-2 absolute  top-0 absolute left-1/2 transform -translate-x-1/2">
+      <div className="md:hidden flex justify-center items-center py-2 absolute  top-7 absolute left-1/2 transform -translate-x-1/2">
         <a
           href="tel:94721 67198" // Replace with your mobile number
           className="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600"

@@ -17,7 +17,7 @@ import Heater from '../images/heater.webp';
 import CeilingFan from '../images/ceilinfan.webp';
 import Cooler from '../images/cooler.webp';
 import Blender from '../images/blender.jpg';
-import FoodProcessor from '../images/foodprocessor.webp';
+import FoodProcessor from '../images/foodProcessor.webp';
 import Toaster from '../images/toaster.webp';
 
 function Services() {

@@ -306,11 +306,11 @@ const LegacyContainer = styled.div`
 const HeroDiv = styled.div`
   position: relative;
   width: 100%;
-  height: 400px;
+  height: auto;
 
   img {
     width: 100%;
-    height: 400px;
+    height: auto;
     z-index: -1;
   }
 
@@ -322,10 +322,10 @@ const HeroDiv = styled.div`
     }
   }
   @media screen and (max-width: 99100px) {
-    height: 300px;
+    height: auto;
 
     img {
-      height: 300px;
+      height: auto;
     }
   }
 `;

@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-
+import { FaBackspace } from "react-icons/fa";
 
 
 function Appointment() {
@@ -390,6 +390,8 @@ function Appointment() {
 
   return (
     <div className="py-16 bg-gray-50">
+      <StyledLink to="/"> <FaBackspace/> </StyledLink>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -577,18 +579,18 @@ function Appointment() {
                   <label className="block text-sm font-medium text-gray-700">Address</label>
                   <input
                     type="text"
-                    {...register('address', { required: 'Address is required' })}
+                    {...register('address')}
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
                   />
-                  <button
+                  {/* <button
                     type="button"
                     onClick={fetchAddressFromGeolocation}
                     className="mt-2 bg-primary text-white py-2 px-4 rounded-md hover:bg-secondary transition-colors"
                   >
                     Use My Current Location
-                  </button>
+                  </button> */}
                   {errors.address && <p className="mt-1 text-sm text-red-600">{errors.address.message}</p>}
                 </div>
   
@@ -634,3 +636,18 @@ const ThankYouMessage = styled.div`
   max-width: 600px;
   color: white;
 `;
+
+const StyledLink = styled(Link)`
+  font-size: 50px;
+  position: fixed;
+  top: 15%;
+  right: 10%;
+
+  @media (max-width: 500px){
+  position: fixed;
+    top: 10%;
+    right: 7%;
+    font-size: 30px;
+  }
+`
+
