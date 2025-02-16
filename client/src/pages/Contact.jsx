@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
-import ContactImage from '../images/Contact.png';
+import ContactImage from '../images/contact.png';
 import styled from 'styled-components';
 import { FcEndCall } from "react-icons/fc";
 import { MdAttachEmail } from "react-icons/md";

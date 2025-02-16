@@ -26,9 +26,9 @@ app.use(morgan('dev'));
 app.use("/api/v1/customer", require("./route/customerRoute"));
 app.use("/api/v1/feedback", require("./route/feedbackRoutes"));
 
-// app.get('/', (req, res) => {
-//     res.send('Hello World!')
-//   })
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+  })
 
 // static file access
 // app.use(express.static(path.join(__dirname, './client/build')))
