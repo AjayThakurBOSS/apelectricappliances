@@ -1,4 +1,4 @@
-import {  BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import {  Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -14,23 +14,16 @@ function App() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <Router>
+      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route path='/login' element={<Login/> }/>
         <Route path='/register' element={<Register/>}  />
-        <Route path='/dashboard' element={
-         <LayoutPage/>
-         
-          } />
-         {/*  <Route path='/dashboard' element={
-          <ProtectedRoute> <LayoutPage/>
-          </ProtectedRoute>
-          } /> */}
+        
         </Routes>
-        </Router>
+    
       </main>
       <Footer />
       
