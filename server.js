@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 // Error Handling Middleware
 // Enable CORS for all origins or specify your frontend's origin
 app.use(cors({
-    origin: 'http://localhost:5173', // Replace with your frontend's origin
+    origin: 'https://aptac.in/', // Replace with your frontend's origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
     credentials: true, // If cookies or authentication headers are needed
 }));

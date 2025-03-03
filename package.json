@@ -1,6 +1,6 @@
 {
   "name": "ajay",
-  "proxy": "http://localhost:5173",
+  "proxy": "https://aptac.in/",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
