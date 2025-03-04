@@ -1,57 +1,43 @@
-.main{
-   display: flex;
-   justify-content: flex-start;
-   align-items: flex-start;
-padding: 10px;
-   margin: 0;
-   height: 100vh;
+.main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 0;
+    height: 100vh;
+    position: relative;
 
-}
-
-.sidebar{
-    /* border: 1px solid blue; */
+  }
+  
+  .sidebar {
     height: 100%;
     width: 300px;
     border-radius: 5px;
-    background-color: rgb(5, 67, 155);
+    background-color: rgb(3, 141, 88);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.555);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     border-top-right-radius: 0px;
-
-
-}
-
-.content{
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .content {
     height: 100%;
     width: 100%;
-    /* padding-left: 10px; */
-}
-
-.header{
+  }
+  
+  .header {
     height: 7vh;
-    /* border: 1px solid black; */
     width: 100%;
-    /* border-radius: 5px; */
-    border-top-left-radius: 0px;
-  /*   -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px; */
     box-shadow: 1px 0px 2px rgba(64, 17, 17, 0.992);
-    background-color: rgb(5, 67, 155);;
+    background-color: rgb(3, 141, 88);
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 10px;
     color: #fff !important;
-
-}
-
-.header a{
+  }
+  
+  .header a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,82 +45,115 @@ padding: 10px;
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
-
-}
-.body{
+  }
+  
+  .body {
     width: 100%;
-    /* height: 91%; */
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    /* box-shadow: 1px 0px 2px rgba(64, 17, 17, 0.992); */
     background-color: #ffffff;
-    padding-left: 20px ;
+    padding-left: 20px;
     overflow: scroll;
     height: 92vh;
-}
-
-.logo{
+  }
+  
+  .logo {
     font-size: 2rem;
     margin: 10px;
-}
-.logo h1{
-    font-weight: 600;
-    text-align: center;
-}
-
-.eachMenu{
+    background: white;
+  }
+  
+  .logo img {
+    height: 100px;
+  }
+  
+  .eachMenu {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: 2px 5px;
+    padding: 10px 5px;
     margin-bottom: 3px;
     color: #ffffff;
-
-}
-.eachMenu a{
-    padding-left: 5px;   
+  }
+  
+  .eachMenu a {
+    padding-left: 5px;
     text-decoration: none;
-    font-weight: 600; 
+    font-weight: 600;
     color: #ffffff;
     display: flex;
     flex-direction: row;
     gap: 10px;
     justify-content: center;
     align-items: center;
-
-}
-
-.active{
+  }
+  
+  .active {
     background-color: rgb(255, 255, 255) !important;
-}
-.active a{
+  }
+  
+  .active a {
     color: rgb(18, 4, 110) !important;
     background-color: rgb(255, 255, 255);
-
-}
-
-.hrStyle {
-    color:rgba(255, 255, 255, 0.555);
+  }
+  
+  .hrStyle {
+    color: rgba(255, 255, 255, 0.555);
     margin-top: 1px;
-}
-.menu {
+  }
+  
+  .menu {
     height: 78vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
-}
-.logout{
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.logout a{
-    color: #fff; 
-    text-decoration: none;
-}
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      z-index: 1000;
+    }
+  
+    .sidebar.open {
+      transform: translateX(0);
+    }
+  
+    .header {
+      justify-content: flex-end;
+    }
+  
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      font-size: 24px;
+      color: #fff;
+      margin-left: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        z-index: 1000;
+        width: 200px;
+        font-size: 14px;
+      }
+
+      .main{
+
+        img{
+            height: 80px
+          }
+      }
+
+      
+  }

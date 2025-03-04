@@ -7,6 +7,7 @@ import { MdAttachEmail } from "react-icons/md";
 import { FaHospitalAlt } from "react-icons/fa";
 import axios from 'axios';
 import { useState } from 'react';
+import HomePage from './HomePage';
 
 function Contact() {
   const [message, setMessage] = useState("");
@@ -58,7 +59,7 @@ function Contact() {
   };
 
   return (
-    <>
+    <HomePage>
       <LegacyContainer>
         <HeroDiv>
           <img src={ContactImage} alt=" page Image"></img>
@@ -200,7 +201,7 @@ kankarbagh patna 20,
           )}
         </ContactUsForm>
       </LegacyContainer>
-    </>
+    </HomePage>
   );
 };
 

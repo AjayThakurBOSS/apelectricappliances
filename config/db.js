@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const colors = require('colors');
 require('dotenv').config(); // Ensure .env is loaded
-const MONGODB_URI = process.env.MONGODB_URI
+const MONGODB_URI="mongodb+srv://ajaykrthakur02:0XpuNXMbLR3xkego@cluster0.hxen6zc.mongodb.net/apelectric"
 
 
 const connectDB = async () => {
@@ -13,9 +13,9 @@ const connectDB = async () => {
             useNewUrlParser: true, 
             useUnifiedTopology: true 
         });
-        // console.log(`MongoDB connected: ${mongoose.connection.host}`.bgGreen.white);
+        console.log(`MongoDB connected: ${mongoose.connection.host}`.bgGreen.white);
     } catch (error) {
-        // console.log(`MongoDB connection issue: ${error.message}`.bgRed.white);
+        console.log(`MongoDB connection issue: ${error.message}`.bgRed.white);
         process.exit(1); // Exit process with failure
     }
 };

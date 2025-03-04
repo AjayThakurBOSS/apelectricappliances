@@ -2,26 +2,31 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Logo from "../images/cropedlogo.png"
+import Logo from "../images/colorLogo.png"
+import styled from 'styled-components'
+import { BsFillTelephoneForwardFill } from "react-icons/bs";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-10">
-      <marquee style={{color: 'green', fontWeight:'600'}}>A P Electric & Home Appliances, Best and Fast  Repair  Shop </marquee>
+      <marquee style={{color: 'green', fontWeight:'600'}}>APES Technology |  Electric & Home Appliances Repair| Best and Fast  Repair  Service | Emergency Service </marquee>
       <hr />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-22">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
               <motion.img
-                whileHover={{ scale: 1.1 }}
-                className="h-16 w-auto sm:h-24 md:h-24 lg:h-24"
+                whileHover={{ scale: 1 }}
+                className="h-14 w-auto sm:h-20 md:h-20 lg:h-20"
                 src={Logo}
                 alt="QuickFix Appliances"
               />
             </Link>
+            <NameDiv>
+              <span className=''>APES</span> <br/>Technology
+            </NameDiv>
           </div>
 
           {/* Desktop Menu */}
@@ -33,7 +38,7 @@ function Navbar() {
             </Link>
             <div className="">
             <a
-              href="tel:+1234567890" // Replace with your mobile number
+              href="tel:9472167198" 
               className="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600"
             >
               Call Now
@@ -58,12 +63,12 @@ function Navbar() {
       </div>
 
       {/* Mobile Call Now Button (Centered) */}
-      <div className="md:hidden flex justify-center items-center py-2 absolute  top-7 absolute left-1/2 transform -translate-x-1/2">
+      <div className="md:hidden flex justify-center items-center py-2 absolute  top-7 absolute left-3/4 transform -translate-x-1/2">
         <a
           href="tel:94721 67198" // Replace with your mobile number
-          className="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600"
+          className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600"
         >
-          Call Now
+          <span className="text-md md:text-xl text-white"><BsFillTelephoneForwardFill  className='text-white'/></span>
         </a>
       </div>
 
@@ -94,3 +99,29 @@ function Navbar() {
 }
 
 export default Navbar
+
+
+const NameDiv = styled.div`
+margin: 0;
+padding: 0;
+font-size: 25px;
+line-height: .8;
+color: #020c4a;
+font-weight: 600;
+span {
+   font-family: "Spicy Rice", serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: green;
+}
+
+@media  (max-width: 600px){
+font-size: 18px;
+margin: 0 0 2px 0; 
+  span {
+  font-size: 35px;
+  font-weight: 700;
+  color: green;
+}
+}
+`

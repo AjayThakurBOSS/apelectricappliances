@@ -6,9 +6,10 @@ import axios from 'axios';
 import styled from 'styled-components';
 import { FaBackspace } from "react-icons/fa";
 import HomePage from './HomePage';
+import LayoutPage from '../layout/LayoutPage';
 
 
-function Appointment() {
+function OfflineAppointment() {
   const {
     register,
     handleSubmit,
@@ -390,9 +391,9 @@ function Appointment() {
   const subSelections = getSubSelections(applianceType);
 
   return (
-    <HomePage>
+    <LayoutPage>
     <div className="py-16 bg-gray-50">
-      <StyledLink to="/"> <FaBackspace/> </StyledLink>
+     {/*  <StyledLink to="/"> <FaBackspace/> </StyledLink> */}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -400,7 +401,7 @@ function Appointment() {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-3xl mx-auto"
         >
-          <h1 className="text-4xl font-bold text-center mb-8">Schedule a Service</h1>
+          <h1 className="text-4xl font-bold text-center mb-8">Book Appointment</h1>
           {
             isSubmitted ? (
               <ThankYouMessage>
@@ -624,11 +625,11 @@ function Appointment() {
         </motion.div>
       </div>
     </div>
-    </HomePage>
+    </LayoutPage>
   );
 }
 
-export default Appointment;
+export default OfflineAppointment;
 
 const ThankYouMessage = styled.div`
   text-align: center;

@@ -61,6 +61,7 @@ const Register = () => {
             layout="vertical"
             onFinish={onFinishHandler}
             className="card p-3"
+            style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent: 'center' }}
           >
             <div
               style={{
@@ -72,7 +73,7 @@ const Register = () => {
               <img src={LogoImg} alt="logo" />
             </div>
 
-            <h5 className="text-center">Register for Patient Account</h5>
+            <h5 className="text-center">Register for Your Account</h5>
             <hr />
             <Row>
               <Col xs={24} md={12} lg={12}>
@@ -203,7 +204,7 @@ const Register = () => {
               Register
             </button>
             <h6>
-              All ready Registered <Link to="/login">Ligin</Link> here...
+              All ready Registered <Link to="/login" style={{color:'green', }}>Ligin</Link> here...
             </h6>
           </Form>
         </div>
@@ -219,11 +220,12 @@ const LoginContainer = styled.div`
   height: 100vh;
   background-color: #eeefff;
   display: flex;
-
+  flex-direction: column;
   img {
-    width: 200px;
+  height:100px;
+    width: 100px;
     align-items: center;
-    margin: 20px 10px 10px 10px;
+    margin: 0px 10px 10px 10px;
   }
   a {
     text-decoration: none;

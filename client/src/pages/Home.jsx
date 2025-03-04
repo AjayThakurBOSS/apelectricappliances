@@ -9,9 +9,11 @@ import QuickBreaf from '../components/QuickBreaf'
 import AllIconCard from '../components/AllIconnCard'
 import TestDropdown from '../components/TestDropdown'
 import IconButton from '../components/IconButton'
+import HomePage from './HomePage'
 
 function Home() {
   return (
+    <>
     <div className="overflow-hidden">
 
       <HeroCarousel />
@@ -101,6 +103,7 @@ function Home() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

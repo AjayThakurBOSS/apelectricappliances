@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import FooterLogo from '../images/footerlogo.png'
+import FooterLogo from '../images/colorLogo.png'
 
 function Footer() {
   const position = [25.5970354,85.1487114] // Replace with your actual coordinates

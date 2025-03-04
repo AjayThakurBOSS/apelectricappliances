@@ -13,6 +13,9 @@ router.post('/login', loginController)
 //REGISTER || POST
 router.post("/register", registerController)
 
+// reset password
+//router.post('/reset-password', resetPasswordController.requestResetPassword);
+
 //Auth || POST 
 router.post('/getUserData', authMiddleware , authController)
 
